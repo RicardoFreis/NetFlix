@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+
+    <!-- responsivo -->
+    <link rel="stylesheet" href="style/responsive.css">
+
+    <title>NETFLIX</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h2 class="logo">NETFLIX</h2>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Documentários</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo">HOUSE OF CARDS</h3>
+                <p class="descricao">Nada pode impedir o político sem escrúpulos Frank Underwood de conquistar
+                    Washington. Assista agora a nova temporada de House of Cards que está imperdível !</p>
+
+                <div class="botoes">
+                    <button role="button" class="botao">
+                        <i class="fas fa-play"></i>
+                        ASSISTIR AGORA
+                    </button>
+                    <button role="button" class="botao">
+                        <i class="fas fa-info-circle"></i>
+                        MAIS INFORMAÇÕES
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="container">
+        <div class="video">
+
+            <iframe class="frame" id="image" src="https://www.youtube.com/embed/9mBaqAQ_Y3I"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <br>
+
+            <div class="botoes">
+                <a href="index.html">
+                    <button role="button" class="botao">
+                        <i class="fas fa-play"></i>
+                        Retornar
+                    </button>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/682e35e134.js" crossorigin="anonymous"></script>
+
+    <!-- Jquery - Pega o link do vídeo clicado -->
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var variaveis = location.search.split("?");
+            var quebra = variaveis[1].split("=");
+            var image = document.getElementById("image");
+            image.src = quebra[1];
+        });
+    </script>
+
+</body>
+
+</html>
